@@ -21,9 +21,9 @@ type LineAmountTypes string
 
 // List of LineAmountTypes
 const (
-	EXCLUSIVE LineAmountTypes = "Exclusive"
-	INCLUSIVE LineAmountTypes = "Inclusive"
-	NO_TAX LineAmountTypes = "NoTax"
+	LINEAMOUNTTYPES_EXCLUSIVE LineAmountTypes = "Exclusive"
+	LINEAMOUNTTYPES_INCLUSIVE LineAmountTypes = "Inclusive"
+	LINEAMOUNTTYPES_NO_TAX LineAmountTypes = "NoTax"
 )
 
 // All allowed values of LineAmountTypes enum
