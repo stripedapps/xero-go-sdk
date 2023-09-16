@@ -1,0 +1,16 @@
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+README.md
+api/openapi.yaml
+api_identity.go
+client.go
+configuration.go
+git_push.sh
+go.mod
+go.sum
+model_access_token.go
+model_connection.go
+model_refresh_token.go
+response.go
+utils.go
