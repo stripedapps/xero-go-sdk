@@ -63,7 +63,7 @@ type Payment struct {
 	// A boolean to indicate if a contact has an validation errors
 	HasAccount *bool `json:"HasAccount,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
-	HasValidationErrors *bool `json:"HasValidationErrors,omitempty"`
+	HasValidationErrorsField *bool `json:"HasValidationErrors,omitempty"`
 	// A string to indicate if a invoice status
 	StatusAttributeString *string `json:"StatusAttributeString,omitempty"`
 	// Displays array of validation error messages from the API
@@ -78,8 +78,8 @@ func NewPayment() *Payment {
 	this := Payment{}
 	var hasAccount bool = false
 	this.HasAccount = &hasAccount
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -90,8 +90,8 @@ func NewPaymentWithDefaults() *Payment {
 	this := Payment{}
 	var hasAccount bool = false
 	this.HasAccount = &hasAccount
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -863,36 +863,36 @@ func (o *Payment) SetHasAccount(v bool) {
 	o.HasAccount = &v
 }
 
-// GetHasValidationErrors returns the HasValidationErrors field value if set, zero value otherwise.
-func (o *Payment) GetHasValidationErrors() bool {
-	if o == nil || IsNil(o.HasValidationErrors) {
+// GetHasValidationErrorsField returns the HasValidationErrorsField field value if set, zero value otherwise.
+func (o *Payment) GetHasValidationErrorsField() bool {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasValidationErrors
+	return *o.HasValidationErrorsField
 }
 
-// GetHasValidationErrorsOk returns a tuple with the HasValidationErrors field value if set, nil otherwise
+// GetHasValidationErrorsFieldOk returns a tuple with the HasValidationErrorsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Payment) GetHasValidationErrorsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasValidationErrors) {
+func (o *Payment) GetHasValidationErrorsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		return nil, false
 	}
-	return o.HasValidationErrors, true
+	return o.HasValidationErrorsField, true
 }
 
-// HasHasValidationErrors returns a boolean if a field has been set.
-func (o *Payment) HasHasValidationErrors() bool {
-	if o != nil && !IsNil(o.HasValidationErrors) {
+// HasHasValidationErrorsField returns a boolean if a field has been set.
+func (o *Payment) HasHasValidationErrorsField() bool {
+	if o != nil && !IsNil(o.HasValidationErrorsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasValidationErrors gets a reference to the given bool and assigns it to the HasValidationErrors field.
-func (o *Payment) SetHasValidationErrors(v bool) {
-	o.HasValidationErrors = &v
+// SetHasValidationErrorsField gets a reference to the given bool and assigns it to the HasValidationErrorsField field.
+func (o *Payment) SetHasValidationErrorsField(v bool) {
+	o.HasValidationErrorsField = &v
 }
 
 // GetStatusAttributeString returns the StatusAttributeString field value if set, zero value otherwise.
@@ -1041,8 +1041,8 @@ func (o Payment) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.HasAccount) {
 		toSerialize["HasAccount"] = o.HasAccount
 	}
-	if !IsNil(o.HasValidationErrors) {
-		toSerialize["HasValidationErrors"] = o.HasValidationErrors
+	if !IsNil(o.HasValidationErrorsField) {
+		toSerialize["HasValidationErrors"] = o.HasValidationErrorsField
 	}
 	if !IsNil(o.StatusAttributeString) {
 		toSerialize["StatusAttributeString"] = o.StatusAttributeString

@@ -92,11 +92,11 @@ type Contact struct {
 	// Displays array of attachments from the API
 	Attachments []Attachment `json:"Attachments,omitempty"`
 	// A boolean to indicate if a contact has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// Displays validation errors returned from the API
 	ValidationErrors []ValidationError `json:"ValidationErrors,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
-	HasValidationErrors *bool `json:"HasValidationErrors,omitempty"`
+	HasValidationErrorsField *bool `json:"HasValidationErrors,omitempty"`
 	// Status of object
 	StatusAttributeString *string `json:"StatusAttributeString,omitempty"`
 }
@@ -107,10 +107,10 @@ type Contact struct {
 // will change when the set of required properties is changed
 func NewContact() *Contact {
 	this := Contact{}
-	var hasAttachments bool = false
-	this.HasAttachments = &hasAttachments
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasAttachmentsField bool = false
+	this.HasAttachmentsField = &hasAttachmentsField
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -119,10 +119,10 @@ func NewContact() *Contact {
 // but it doesn't guarantee that properties required by API are set
 func NewContactWithDefaults() *Contact {
 	this := Contact{}
-	var hasAttachments bool = false
-	this.HasAttachments = &hasAttachments
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasAttachmentsField bool = false
+	this.HasAttachmentsField = &hasAttachmentsField
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -1342,36 +1342,36 @@ func (o *Contact) SetAttachments(v []Attachment) {
 	o.Attachments = v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *Contact) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *Contact) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Contact) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *Contact) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *Contact) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *Contact) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *Contact) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *Contact) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -1406,36 +1406,36 @@ func (o *Contact) SetValidationErrors(v []ValidationError) {
 	o.ValidationErrors = v
 }
 
-// GetHasValidationErrors returns the HasValidationErrors field value if set, zero value otherwise.
-func (o *Contact) GetHasValidationErrors() bool {
-	if o == nil || IsNil(o.HasValidationErrors) {
+// GetHasValidationErrorsField returns the HasValidationErrorsField field value if set, zero value otherwise.
+func (o *Contact) GetHasValidationErrorsField() bool {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasValidationErrors
+	return *o.HasValidationErrorsField
 }
 
-// GetHasValidationErrorsOk returns a tuple with the HasValidationErrors field value if set, nil otherwise
+// GetHasValidationErrorsFieldOk returns a tuple with the HasValidationErrorsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Contact) GetHasValidationErrorsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasValidationErrors) {
+func (o *Contact) GetHasValidationErrorsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		return nil, false
 	}
-	return o.HasValidationErrors, true
+	return o.HasValidationErrorsField, true
 }
 
-// HasHasValidationErrors returns a boolean if a field has been set.
-func (o *Contact) HasHasValidationErrors() bool {
-	if o != nil && !IsNil(o.HasValidationErrors) {
+// HasHasValidationErrorsField returns a boolean if a field has been set.
+func (o *Contact) HasHasValidationErrorsField() bool {
+	if o != nil && !IsNil(o.HasValidationErrorsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasValidationErrors gets a reference to the given bool and assigns it to the HasValidationErrors field.
-func (o *Contact) SetHasValidationErrors(v bool) {
-	o.HasValidationErrors = &v
+// SetHasValidationErrorsField gets a reference to the given bool and assigns it to the HasValidationErrorsField field.
+func (o *Contact) SetHasValidationErrorsField(v bool) {
+	o.HasValidationErrorsField = &v
 }
 
 // GetStatusAttributeString returns the StatusAttributeString field value if set, zero value otherwise.
@@ -1594,14 +1594,14 @@ func (o Contact) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Attachments) {
 		toSerialize["Attachments"] = o.Attachments
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.ValidationErrors) {
 		toSerialize["ValidationErrors"] = o.ValidationErrors
 	}
-	if !IsNil(o.HasValidationErrors) {
-		toSerialize["HasValidationErrors"] = o.HasValidationErrors
+	if !IsNil(o.HasValidationErrorsField) {
+		toSerialize["HasValidationErrors"] = o.HasValidationErrorsField
 	}
 	if !IsNil(o.StatusAttributeString) {
 		toSerialize["StatusAttributeString"] = o.StatusAttributeString

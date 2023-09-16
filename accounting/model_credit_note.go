@@ -70,7 +70,7 @@ type CreditNote struct {
 	// A string to indicate if a invoice status
 	StatusAttributeString *string `json:"StatusAttributeString,omitempty"`
 	// boolean to indicate if a credit note has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// A boolean to indicate if a credit note has an validation errors
 	HasErrors *bool `json:"HasErrors,omitempty"`
 	// Displays array of validation error messages from the API
@@ -85,8 +85,8 @@ type CreditNote struct {
 // will change when the set of required properties is changed
 func NewCreditNote() *CreditNote {
 	this := CreditNote{}
-	var hasAttachments bool = false
-	this.HasAttachments = &hasAttachments
+	var hasAttachmentsField bool = false
+	this.HasAttachmentsField = &hasAttachmentsField
 	var hasErrors bool = false
 	this.HasErrors = &hasErrors
 	return &this
@@ -97,8 +97,8 @@ func NewCreditNote() *CreditNote {
 // but it doesn't guarantee that properties required by API are set
 func NewCreditNoteWithDefaults() *CreditNote {
 	this := CreditNote{}
-	var hasAttachments bool = false
-	this.HasAttachments = &hasAttachments
+	var hasAttachmentsField bool = false
+	this.HasAttachmentsField = &hasAttachmentsField
 	var hasErrors bool = false
 	this.HasErrors = &hasErrors
 	return &this
@@ -936,36 +936,36 @@ func (o *CreditNote) SetStatusAttributeString(v string) {
 	o.StatusAttributeString = &v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *CreditNote) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *CreditNote) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreditNote) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *CreditNote) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *CreditNote) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *CreditNote) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *CreditNote) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *CreditNote) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetHasErrors returns the HasErrors field value if set, zero value otherwise.
@@ -1152,8 +1152,8 @@ func (o CreditNote) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.StatusAttributeString) {
 		toSerialize["StatusAttributeString"] = o.StatusAttributeString
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.HasErrors) {
 		toSerialize["HasErrors"] = o.HasErrors

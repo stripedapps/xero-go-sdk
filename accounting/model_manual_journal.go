@@ -34,7 +34,7 @@ type ManualJournal struct {
 	// Boolean – default is true if not specified
 	ShowOnCashBasisReports *bool `json:"ShowOnCashBasisReports,omitempty"`
 	// Boolean to indicate if a manual journal has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// Last modified date UTC format
 	UpdatedDateUTC *string `json:"UpdatedDateUTC,omitempty"`
 	// The Xero identifier for a Manual Journal
@@ -283,36 +283,36 @@ func (o *ManualJournal) SetShowOnCashBasisReports(v bool) {
 	o.ShowOnCashBasisReports = &v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *ManualJournal) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *ManualJournal) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ManualJournal) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *ManualJournal) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *ManualJournal) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *ManualJournal) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *ManualJournal) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *ManualJournal) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetUpdatedDateUTC returns the UpdatedDateUTC field value if set, zero value otherwise.
@@ -536,8 +536,8 @@ func (o ManualJournal) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ShowOnCashBasisReports) {
 		toSerialize["ShowOnCashBasisReports"] = o.ShowOnCashBasisReports
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.UpdatedDateUTC) {
 		toSerialize["UpdatedDateUTC"] = o.UpdatedDateUTC

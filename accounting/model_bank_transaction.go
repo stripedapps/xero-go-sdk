@@ -55,7 +55,7 @@ type BankTransaction struct {
 	// Last modified date UTC format
 	UpdatedDateUTC *string `json:"UpdatedDateUTC,omitempty"`
 	// Boolean to indicate if a bank transaction has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// A string to indicate if a invoice status
 	StatusAttributeString *string `json:"StatusAttributeString,omitempty"`
 	// Displays array of validation error messages from the API
@@ -666,36 +666,36 @@ func (o *BankTransaction) SetUpdatedDateUTC(v string) {
 	o.UpdatedDateUTC = &v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *BankTransaction) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *BankTransaction) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *BankTransaction) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *BankTransaction) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *BankTransaction) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *BankTransaction) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *BankTransaction) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *BankTransaction) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetStatusAttributeString returns the StatusAttributeString field value if set, zero value otherwise.
@@ -823,8 +823,8 @@ func (o BankTransaction) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.UpdatedDateUTC) {
 		toSerialize["UpdatedDateUTC"] = o.UpdatedDateUTC
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.StatusAttributeString) {
 		toSerialize["StatusAttributeString"] = o.StatusAttributeString
