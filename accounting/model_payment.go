@@ -61,7 +61,7 @@ type Payment struct {
 	// The information to appear on the supplier's bank account
 	Details *string `json:"Details,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
-	HasAccount *bool `json:"HasAccount,omitempty"`
+	HasAccountField *bool `json:"HasAccount,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
 	HasValidationErrorsField *bool `json:"HasValidationErrors,omitempty"`
 	// A string to indicate if a invoice status
@@ -76,8 +76,8 @@ type Payment struct {
 // will change when the set of required properties is changed
 func NewPayment() *Payment {
 	this := Payment{}
-	var hasAccount bool = false
-	this.HasAccount = &hasAccount
+	var hasAccountField bool = false
+	this.HasAccountField = &hasAccountField
 	var hasValidationErrorsField bool = false
 	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
@@ -88,8 +88,8 @@ func NewPayment() *Payment {
 // but it doesn't guarantee that properties required by API are set
 func NewPaymentWithDefaults() *Payment {
 	this := Payment{}
-	var hasAccount bool = false
-	this.HasAccount = &hasAccount
+	var hasAccountField bool = false
+	this.HasAccountField = &hasAccountField
 	var hasValidationErrorsField bool = false
 	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
@@ -831,36 +831,36 @@ func (o *Payment) SetDetails(v string) {
 	o.Details = &v
 }
 
-// GetHasAccount returns the HasAccount field value if set, zero value otherwise.
-func (o *Payment) GetHasAccount() bool {
-	if o == nil || IsNil(o.HasAccount) {
+// GetHasAccountField returns the HasAccountField field value if set, zero value otherwise.
+func (o *Payment) GetHasAccountField() bool {
+	if o == nil || IsNil(o.HasAccountField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAccount
+	return *o.HasAccountField
 }
 
-// GetHasAccountOk returns a tuple with the HasAccount field value if set, nil otherwise
+// GetHasAccountFieldOk returns a tuple with the HasAccountField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Payment) GetHasAccountOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAccount) {
+func (o *Payment) GetHasAccountFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAccountField) {
 		return nil, false
 	}
-	return o.HasAccount, true
+	return o.HasAccountField, true
 }
 
-// HasHasAccount returns a boolean if a field has been set.
-func (o *Payment) HasHasAccount() bool {
-	if o != nil && !IsNil(o.HasAccount) {
+// HasHasAccountField returns a boolean if a field has been set.
+func (o *Payment) HasHasAccountField() bool {
+	if o != nil && !IsNil(o.HasAccountField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAccount gets a reference to the given bool and assigns it to the HasAccount field.
-func (o *Payment) SetHasAccount(v bool) {
-	o.HasAccount = &v
+// SetHasAccountField gets a reference to the given bool and assigns it to the HasAccountField field.
+func (o *Payment) SetHasAccountField(v bool) {
+	o.HasAccountField = &v
 }
 
 // GetHasValidationErrorsField returns the HasValidationErrorsField field value if set, zero value otherwise.
@@ -1038,8 +1038,8 @@ func (o Payment) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Details) {
 		toSerialize["Details"] = o.Details
 	}
-	if !IsNil(o.HasAccount) {
-		toSerialize["HasAccount"] = o.HasAccount
+	if !IsNil(o.HasAccountField) {
+		toSerialize["HasAccount"] = o.HasAccountField
 	}
 	if !IsNil(o.HasValidationErrorsField) {
 		toSerialize["HasValidationErrors"] = o.HasValidationErrorsField
