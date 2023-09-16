@@ -6,8 +6,6 @@ api_accounting.go
 client.go
 configuration.go
 git_push.sh
-go.mod
-go.sum
 model_account.go
 model_account_type.go
 model_accounts.go

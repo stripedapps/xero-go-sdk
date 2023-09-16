@@ -45,7 +45,7 @@ type RepeatingInvoice struct {
 	// Xero generated unique identifier for repeating invoice template
 	ID *string `json:"ID,omitempty"`
 	// Boolean to indicate if an invoice has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// Displays array of attachments from the API
 	Attachments []Attachment `json:"Attachments,omitempty"`
 	// Boolean to indicate whether the invoice has been approved for sending
@@ -539,36 +539,36 @@ func (o *RepeatingInvoice) SetID(v string) {
 	o.ID = &v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *RepeatingInvoice) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *RepeatingInvoice) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RepeatingInvoice) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *RepeatingInvoice) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *RepeatingInvoice) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *RepeatingInvoice) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *RepeatingInvoice) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *RepeatingInvoice) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetAttachments returns the Attachments field value if set, zero value otherwise.
@@ -783,8 +783,8 @@ func (o RepeatingInvoice) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ID) {
 		toSerialize["ID"] = o.ID
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.Attachments) {
 		toSerialize["Attachments"] = o.Attachments

@@ -61,9 +61,9 @@ type Payment struct {
 	// The information to appear on the supplier's bank account
 	Details *string `json:"Details,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
-	HasAccount *bool `json:"HasAccount,omitempty"`
+	HasAccountField *bool `json:"HasAccount,omitempty"`
 	// A boolean to indicate if a contact has an validation errors
-	HasValidationErrors *bool `json:"HasValidationErrors,omitempty"`
+	HasValidationErrorsField *bool `json:"HasValidationErrors,omitempty"`
 	// A string to indicate if a invoice status
 	StatusAttributeString *string `json:"StatusAttributeString,omitempty"`
 	// Displays array of validation error messages from the API
@@ -76,10 +76,10 @@ type Payment struct {
 // will change when the set of required properties is changed
 func NewPayment() *Payment {
 	this := Payment{}
-	var hasAccount bool = false
-	this.HasAccount = &hasAccount
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasAccountField bool = false
+	this.HasAccountField = &hasAccountField
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -88,10 +88,10 @@ func NewPayment() *Payment {
 // but it doesn't guarantee that properties required by API are set
 func NewPaymentWithDefaults() *Payment {
 	this := Payment{}
-	var hasAccount bool = false
-	this.HasAccount = &hasAccount
-	var hasValidationErrors bool = false
-	this.HasValidationErrors = &hasValidationErrors
+	var hasAccountField bool = false
+	this.HasAccountField = &hasAccountField
+	var hasValidationErrorsField bool = false
+	this.HasValidationErrorsField = &hasValidationErrorsField
 	return &this
 }
 
@@ -831,68 +831,68 @@ func (o *Payment) SetDetails(v string) {
 	o.Details = &v
 }
 
-// GetHasAccount returns the HasAccount field value if set, zero value otherwise.
-func (o *Payment) GetHasAccount() bool {
-	if o == nil || IsNil(o.HasAccount) {
+// GetHasAccountField returns the HasAccountField field value if set, zero value otherwise.
+func (o *Payment) GetHasAccountField() bool {
+	if o == nil || IsNil(o.HasAccountField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAccount
+	return *o.HasAccountField
 }
 
-// GetHasAccountOk returns a tuple with the HasAccount field value if set, nil otherwise
+// GetHasAccountFieldOk returns a tuple with the HasAccountField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Payment) GetHasAccountOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAccount) {
+func (o *Payment) GetHasAccountFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAccountField) {
 		return nil, false
 	}
-	return o.HasAccount, true
+	return o.HasAccountField, true
 }
 
-// HasHasAccount returns a boolean if a field has been set.
-func (o *Payment) HasHasAccount() bool {
-	if o != nil && !IsNil(o.HasAccount) {
+// HasHasAccountField returns a boolean if a field has been set.
+func (o *Payment) HasHasAccountField() bool {
+	if o != nil && !IsNil(o.HasAccountField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAccount gets a reference to the given bool and assigns it to the HasAccount field.
-func (o *Payment) SetHasAccount(v bool) {
-	o.HasAccount = &v
+// SetHasAccountField gets a reference to the given bool and assigns it to the HasAccountField field.
+func (o *Payment) SetHasAccountField(v bool) {
+	o.HasAccountField = &v
 }
 
-// GetHasValidationErrors returns the HasValidationErrors field value if set, zero value otherwise.
-func (o *Payment) GetHasValidationErrors() bool {
-	if o == nil || IsNil(o.HasValidationErrors) {
+// GetHasValidationErrorsField returns the HasValidationErrorsField field value if set, zero value otherwise.
+func (o *Payment) GetHasValidationErrorsField() bool {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasValidationErrors
+	return *o.HasValidationErrorsField
 }
 
-// GetHasValidationErrorsOk returns a tuple with the HasValidationErrors field value if set, nil otherwise
+// GetHasValidationErrorsFieldOk returns a tuple with the HasValidationErrorsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Payment) GetHasValidationErrorsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasValidationErrors) {
+func (o *Payment) GetHasValidationErrorsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasValidationErrorsField) {
 		return nil, false
 	}
-	return o.HasValidationErrors, true
+	return o.HasValidationErrorsField, true
 }
 
-// HasHasValidationErrors returns a boolean if a field has been set.
-func (o *Payment) HasHasValidationErrors() bool {
-	if o != nil && !IsNil(o.HasValidationErrors) {
+// HasHasValidationErrorsField returns a boolean if a field has been set.
+func (o *Payment) HasHasValidationErrorsField() bool {
+	if o != nil && !IsNil(o.HasValidationErrorsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasValidationErrors gets a reference to the given bool and assigns it to the HasValidationErrors field.
-func (o *Payment) SetHasValidationErrors(v bool) {
-	o.HasValidationErrors = &v
+// SetHasValidationErrorsField gets a reference to the given bool and assigns it to the HasValidationErrorsField field.
+func (o *Payment) SetHasValidationErrorsField(v bool) {
+	o.HasValidationErrorsField = &v
 }
 
 // GetStatusAttributeString returns the StatusAttributeString field value if set, zero value otherwise.
@@ -1038,11 +1038,11 @@ func (o Payment) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Details) {
 		toSerialize["Details"] = o.Details
 	}
-	if !IsNil(o.HasAccount) {
-		toSerialize["HasAccount"] = o.HasAccount
+	if !IsNil(o.HasAccountField) {
+		toSerialize["HasAccount"] = o.HasAccountField
 	}
-	if !IsNil(o.HasValidationErrors) {
-		toSerialize["HasValidationErrors"] = o.HasValidationErrors
+	if !IsNil(o.HasValidationErrorsField) {
+		toSerialize["HasValidationErrors"] = o.HasValidationErrorsField
 	}
 	if !IsNil(o.StatusAttributeString) {
 		toSerialize["StatusAttributeString"] = o.StatusAttributeString

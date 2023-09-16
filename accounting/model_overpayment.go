@@ -52,7 +52,7 @@ type Overpayment struct {
 	// See Payments
 	Payments []Payment `json:"Payments,omitempty"`
 	// boolean to indicate if a overpayment has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// See Attachments
 	Attachments []Attachment `json:"Attachments,omitempty"`
 }
@@ -618,36 +618,36 @@ func (o *Overpayment) SetPayments(v []Payment) {
 	o.Payments = v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *Overpayment) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *Overpayment) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Overpayment) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *Overpayment) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *Overpayment) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *Overpayment) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *Overpayment) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *Overpayment) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetAttachments returns the Attachments field value if set, zero value otherwise.
@@ -743,8 +743,8 @@ func (o Overpayment) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Payments) {
 		toSerialize["Payments"] = o.Payments
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.Attachments) {
 		toSerialize["Attachments"] = o.Attachments

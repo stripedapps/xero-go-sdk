@@ -62,7 +62,7 @@ type PurchaseOrder struct {
 	// Total of discounts applied on the purchase order line items
 	TotalDiscount *float64 `json:"TotalDiscount,omitempty"`
 	// boolean to indicate if a purchase order has an attachment
-	HasAttachments *bool `json:"HasAttachments,omitempty"`
+	HasAttachmentsField *bool `json:"HasAttachments,omitempty"`
 	// Last modified date UTC format
 	UpdatedDateUTC *string `json:"UpdatedDateUTC,omitempty"`
 	// A string to indicate if a invoice status
@@ -796,36 +796,36 @@ func (o *PurchaseOrder) SetTotalDiscount(v float64) {
 	o.TotalDiscount = &v
 }
 
-// GetHasAttachments returns the HasAttachments field value if set, zero value otherwise.
-func (o *PurchaseOrder) GetHasAttachments() bool {
-	if o == nil || IsNil(o.HasAttachments) {
+// GetHasAttachmentsField returns the HasAttachmentsField field value if set, zero value otherwise.
+func (o *PurchaseOrder) GetHasAttachmentsField() bool {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		var ret bool
 		return ret
 	}
-	return *o.HasAttachments
+	return *o.HasAttachmentsField
 }
 
-// GetHasAttachmentsOk returns a tuple with the HasAttachments field value if set, nil otherwise
+// GetHasAttachmentsFieldOk returns a tuple with the HasAttachmentsField field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PurchaseOrder) GetHasAttachmentsOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasAttachments) {
+func (o *PurchaseOrder) GetHasAttachmentsFieldOk() (*bool, bool) {
+	if o == nil || IsNil(o.HasAttachmentsField) {
 		return nil, false
 	}
-	return o.HasAttachments, true
+	return o.HasAttachmentsField, true
 }
 
-// HasHasAttachments returns a boolean if a field has been set.
-func (o *PurchaseOrder) HasHasAttachments() bool {
-	if o != nil && !IsNil(o.HasAttachments) {
+// HasHasAttachmentsField returns a boolean if a field has been set.
+func (o *PurchaseOrder) HasHasAttachmentsField() bool {
+	if o != nil && !IsNil(o.HasAttachmentsField) {
 		return true
 	}
 
 	return false
 }
 
-// SetHasAttachments gets a reference to the given bool and assigns it to the HasAttachments field.
-func (o *PurchaseOrder) SetHasAttachments(v bool) {
-	o.HasAttachments = &v
+// SetHasAttachmentsField gets a reference to the given bool and assigns it to the HasAttachmentsField field.
+func (o *PurchaseOrder) SetHasAttachmentsField(v bool) {
+	o.HasAttachmentsField = &v
 }
 
 // GetUpdatedDateUTC returns the UpdatedDateUTC field value if set, zero value otherwise.
@@ -1064,8 +1064,8 @@ func (o PurchaseOrder) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.TotalDiscount) {
 		toSerialize["TotalDiscount"] = o.TotalDiscount
 	}
-	if !IsNil(o.HasAttachments) {
-		toSerialize["HasAttachments"] = o.HasAttachments
+	if !IsNil(o.HasAttachmentsField) {
+		toSerialize["HasAttachments"] = o.HasAttachmentsField
 	}
 	if !IsNil(o.UpdatedDateUTC) {
 		toSerialize["UpdatedDateUTC"] = o.UpdatedDateUTC
