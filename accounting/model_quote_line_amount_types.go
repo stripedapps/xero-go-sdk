@@ -21,9 +21,9 @@ type QuoteLineAmountTypes string
 
 // List of QuoteLineAmountTypes
 const (
-	EXCLUSIVE QuoteLineAmountTypes = "EXCLUSIVE"
-	INCLUSIVE QuoteLineAmountTypes = "INCLUSIVE"
-	NOTAX QuoteLineAmountTypes = "NOTAX"
+	QUOTELINEAMOUNTTYPES_EXCLUSIVE QuoteLineAmountTypes = "EXCLUSIVE"
+	QUOTELINEAMOUNTTYPES_INCLUSIVE QuoteLineAmountTypes = "INCLUSIVE"
+	QUOTELINEAMOUNTTYPES_NOTAX QuoteLineAmountTypes = "NOTAX"
 )
 
 // All allowed values of QuoteLineAmountTypes enum

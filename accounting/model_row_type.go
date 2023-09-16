@@ -21,10 +21,10 @@ type RowType string
 
 // List of RowType
 const (
-	HEADER RowType = "Header"
-	SECTION RowType = "Section"
-	ROW RowType = "Row"
-	SUMMARY_ROW RowType = "SummaryRow"
+	ROWTYPE_HEADER RowType = "Header"
+	ROWTYPE_SECTION RowType = "Section"
+	ROWTYPE_ROW RowType = "Row"
+	ROWTYPE_SUMMARY_ROW RowType = "SummaryRow"
 )
 
 // All allowed values of RowType enum

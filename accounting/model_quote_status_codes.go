@@ -21,12 +21,12 @@ type QuoteStatusCodes string
 
 // List of QuoteStatusCodes
 const (
-	DRAFT QuoteStatusCodes = "DRAFT"
-	SENT QuoteStatusCodes = "SENT"
-	DECLINED QuoteStatusCodes = "DECLINED"
-	ACCEPTED QuoteStatusCodes = "ACCEPTED"
-	INVOICED QuoteStatusCodes = "INVOICED"
-	DELETED QuoteStatusCodes = "DELETED"
+	QUOTESTATUSCODES_DRAFT QuoteStatusCodes = "DRAFT"
+	QUOTESTATUSCODES_SENT QuoteStatusCodes = "SENT"
+	QUOTESTATUSCODES_DECLINED QuoteStatusCodes = "DECLINED"
+	QUOTESTATUSCODES_ACCEPTED QuoteStatusCodes = "ACCEPTED"
+	QUOTESTATUSCODES_INVOICED QuoteStatusCodes = "INVOICED"
+	QUOTESTATUSCODES_DELETED QuoteStatusCodes = "DELETED"
 )
 
 // All allowed values of QuoteStatusCodes enum
